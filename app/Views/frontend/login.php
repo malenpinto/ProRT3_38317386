@@ -1,17 +1,18 @@
 <div class="container mt-5">
+    <h2 class="text-center cambio-letra-uno">Iniciar Sesión</h2>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="form-group">
 
-                <label for="email" class="col-sm-2 col-form-label cambio-letra-uno">Email</label>
-                <div class="col-sm-10">
+                <label for="email" class="col-sm-2 ms-5 col-form-label cambio-letra-uno">Email</label>
+                <div class="col-sm-10 ms-5">
                     <input type="email" class="form-control" id="email" placeholder="Escriba su email">
                 </div>
-                <label for="password" class="col-sm-2 col-form-label cambio-letra-uno">Contraseña</label>
-                <div class="col-sm-10">
+                <label for="password" class="col-sm-2 ms-5 col-form-label cambio-letra-uno">Contraseña</label>
+                <div class="col-sm-10 ms-5">
                     <input type="password" class="form-control" id="password" placeholder="Escriba su contraseña">
                 </div>
-                <div class="col-auto mt-3">
+                <div class="col-auto ms-5 mt-3">
                     <button type="submit" class="btn btn-outline-dark cambio-letra-uno mb-3"> · Iniciar Sesión ·</button>
                 </div>
             </div>

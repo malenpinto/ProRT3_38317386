@@ -32,17 +32,17 @@
         <div class="col-md-6">
             <h5 class="text-center cambio-letra-uno mb-2">DEJE AQUI SU CONSULTA<i class="fa-solid fa-file-circle-question ms-2"></i></h5>
             <div class="mb-3">
-                <label for="nombre" class="form-label cambio-letra-uno">Nombre Completo</label>
+                <label for="nombre" class="form-label mb-1 cambio-letra-uno">Nombre Completo</label>
                 <input type="name" class="form-control" id="nombre" placeholder="Juan Gomez">
-                <label for="email" class="form-label cambio-letra-uno">Email</label>
+                <label for="email" class="form-label mb-1 mt-1 cambio-letra-uno">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                <label for="celular" class="form-label cambio-letra-uno">Celular</label>
+                <label for="celular" class="form-label mb-1 mt-1 cambio-letra-uno">Celular</label>
                 <input type="num" class="form-control" id="celular" placeholder="Escriba su número sin puntos, ni espacios">
-                <label for="motivo" class="form-label cambio-letra-uno">Motivo</label>
+                <label for="motivo" class="form-label mb-1 mt-1 cambio-letra-uno">Motivo</label>
                 <input type="name" class="form-control" id="motivo" placeholder="Escriba el motivo">
             </div>
-            <div class="mb-3">
-                <label for="consulta" class="form-label cambio-letra-uno">Consulta</label>
+            <div class="mb-2">
+                <label for="consulta" class="form-label mb-1 cambio-letra-uno">Consulta</label>
                 <textarea class="form-control" id="consulta" rows="3" placeholder="Deje aquí su consulta"></textarea>
                 <div class="col-auto mt-3">
                     <button type="submit" class="btn btn-outline-dark cambio-letra-uno mb-3">Enviar</button>
