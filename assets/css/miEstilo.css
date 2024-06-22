@@ -139,7 +139,7 @@ nav .nav-link{
 }
 
 a.no-underline {
-    color: #333; /* Cambia el color del texto del enlace */
+    color: #333333; /* Cambia el color del texto del enlace */
     text-decoration: none!important; /* Elimina el subrayado del enlace */
     /*color: inherit; Usa el color heredado */
 }
