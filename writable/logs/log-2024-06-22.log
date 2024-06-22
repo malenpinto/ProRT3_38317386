@@ -1,0 +1,63 @@
+CRITICAL - 2024-06-22 00:47:29 --> Error: Call to undefined function form_open()
+[Method: GET, Route: /]
+in APPPATH\Views\plantillas\navbar.php on line 32.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('plantillas/navbar', [], true)
+ 4 APPPATH\Controllers\Home.php(10): view('plantillas/navbar')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-22 00:49:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/nav.php"
+[Method: GET, Route: quienessomos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/nav.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('plantillas/nav', [], true)
+ 3 APPPATH\Controllers\Home.php(16): view('plantillas/nav')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ver_quienes_somos()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-22 00:49:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "frontend/quienesomos.php"
+[Method: GET, Route: quienessomos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/quienesomos.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('frontend/quienesomos', [], true)
+ 3 APPPATH\Controllers\Home.php(16): view('frontend/quienesomos')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ver_quienes_somos()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-22 01:26:53 --> Error: Call to undefined function form_label()
+[Method: GET, Route: contacto]
+in APPPATH\Views\frontend\contacto.php on line 36.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('frontend/contacto', [], true)
+ 4 APPPATH\Controllers\Home.php(22): view('frontend/contacto')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ver_contacto()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-22 01:27:31 --> Error: Call to undefined function form_label()
+[Method: GET, Route: contacto]
+in APPPATH\Views\frontend\contacto.php on line 36.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('frontend/contacto', [], true)
+ 4 APPPATH\Controllers\Home.php(22): view('frontend/contacto')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ver_contacto()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
