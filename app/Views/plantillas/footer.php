@@ -7,6 +7,9 @@
     <h3 class="footer-text" style="background: #e8b786; color: #595959; padding: 0;">© 2024 Diseñado por Malen Pinto </h3>
 </footer>
 <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js'); ?>" integrity="" crossorigin=""></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>F
 </body>
 
 </html>
