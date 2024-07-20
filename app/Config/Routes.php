@@ -32,9 +32,13 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('quienessomos', 'Home::ver_quienes_somos');
 $routes->get('contacto', 'Home::ver_contacto');
-$routes->get('registrarse', 'Home::ver_registro');
-$routes->get('iniciarsesion', 'Home::iniciar_sesion');
 
+$routes->get('registrarse', 'UsuariosController::ver_registrarse');
+$routes->get('iniciarsesion', 'UsuariosController::ver_iniciar_sesion');
+$routes->get('cerrarsesion', 'UsuariosController::cerrar_sesion');
+
+$routes->post('verificarUsuario', 'UsuariosController::buscar_cuenta');
+$routes->post('registrar', 'UsuariosController::agregar_usuario');
 
 /*
  * --------------------------------------------------------------------

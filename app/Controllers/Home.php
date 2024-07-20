@@ -21,16 +21,4 @@ class Home extends BaseController
         $data['titulo'] = 'Contacto';
         return view('plantillas/head', $data) . view('plantillas/navbar') . view('frontend/contacto') . view('plantillas/footer');
     }
-
-    public function ver_registro()
-    {
-        $data['titulo'] = 'Registrarse';
-        return view('plantillas/head', $data) . view('plantillas/navbar') . view('frontend/registrarse') . view('plantillas/footer');
-    }
-
-    public function iniciar_sesion()
-    {
-        $data['titulo'] = 'Iniciar Sesión';
-        return view('plantillas/head', $data) . view('plantillas/navbar') . view('frontend/login') . view('plantillas/footer');
-    }
 }

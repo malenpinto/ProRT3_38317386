@@ -22,16 +22,28 @@
                             <li class="nav-item">
                                 <a class="nav-link <?php echo (current_url() == base_url('contacto')) ? 'active-2' : ''; ?> tipoLetra" href="<?php echo base_url('contacto'); ?>">Contacto</a>
                             </li>
-                            <li class="nav-item ms-5">
-                                <a class="nav-link tipoLetra <?php echo (current_url() == base_url('iniciarsesion')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('iniciarsesion') ?>">
-                                    <i class="fa-solid fa-user me-2"></i>Iniciar sesión
-                                </a>
-                            </li>
-                            <li class="nav-item ms-2">
-                                <a class="nav-link tipoLetra <?php echo (current_url() == base_url('registrarse')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('registrarse') ?>">
-                                    <i class="fa-solid fa-user-plus me-2"></i>Registrarse
-                                </a>
-                            </li>
+
+                            <?php if (session('login')) { ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link cambio-letra-uno dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user me-2"></i><?php echo session('nombre'); ?></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item cambio-letra-uno" href="<?php echo base_url('cerrarsesion') ?>">Cerrar Sesión</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            <?php } else { ?>
+                                <li class="nav-item ms-2">
+                                    <a class="nav-link cambio-letra-uno <?php echo (current_url() == base_url('iniciarsesion')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('iniciarsesion') ?>">
+                                        <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+                                    </a>
+                                </li>
+                                <li class="nav-item ms-2">
+                                    <a class="nav-link cambio-letra-uno <?php echo (current_url() == base_url('registrarse')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('registrarse') ?>">
+                                        <i class="fa-solid fa-user-plus me-2"></i>Registrarse
+                                    </a>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </ul>
@@ -62,11 +74,24 @@
         </div>
     </div>
     <div class="container-fluid d-md-none me-3 justify-content-end">
-        <a class="nav-link tipoLetra <?php echo (current_url() == base_url('iniciarsesion')) ? 'active-2' : ''; ?> me-3" aria-current="page" href="<?= base_url('iniciarsesion') ?>">
-            <i class="fa-solid fa-user me-2"></i>Iniciar sesión
-        </a>
-        <a class="nav-link tipoLetra <?php echo (current_url() == base_url('registrarse')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('registrarse') ?>">
-            <i class="fa-solid fa-user-plus me-2"></i>Registrate
-        </a>
+        <?php if (session('login')) { ?>
+            <li class="nav-item dropdown">
+                <a class="nav-link cambio-letra-uno dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user me-2"></i><?php echo session('nombre'); ?></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item cambio-letra-uno" href="<?php echo base_url('cerrarsesion') ?>">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </li>
+        <?php } else { ?>
+            <a class="nav-link cambio-letra-uno me-3 <?php echo (current_url() == base_url('carrito')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('carrito') ?>">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a class="nav-link cambio-letra-uno <?php echo (current_url() == base_url('iniciarsesion')) ? 'active-2' : ''; ?> me-3" aria-current="page" href="<?= base_url('iniciarsesion') ?>">
+                <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+            </a>
+            <a class="nav-link cambio-letra-uno <?php echo (current_url() == base_url('registrarse')) ? 'active-2' : ''; ?>" aria-current="page" href="<?= base_url('registrarse') ?>">
+                <i class="fa-solid fa-user-plus me-2"></i>Registrate
+            </a>
+        <?php } ?>
     </div>
 </nav>
