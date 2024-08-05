@@ -24,7 +24,6 @@
                         'name' => 'nombre',
                         'class' => 'form-control',
                         'placeholder' => 'Escriba su nombre',
-                        'maxlength' => '',
                         'value' => set_value('nombre'),
                     ]) ?>
                     <!--Mostrar mensaje de error -->
@@ -41,7 +40,6 @@
                         'name' => 'apellido',
                         'class' => 'form-control',
                         'placeholder' => 'Escriba su apellido',
-                        'maxlength' => '',
                         'value' => set_value('apellido'),
                     ]) ?>
                     <!--Mostrar mensaje de error -->

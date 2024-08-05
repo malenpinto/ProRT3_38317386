@@ -107,7 +107,6 @@ class UsuariosController extends BaseController
         $validation = \Config\Services::validation();
         $request = \Config\Services::request();
 
-        // Define las reglas y mensajes de validación para los campos del formulario
         $validation->setRules(
             [
                 'email' => 'required|valid_email',
@@ -125,12 +124,12 @@ class UsuariosController extends BaseController
                 ]
             ]
         );
+
         $campos = [
             'email' => $request->getPost('email'),
             'password' => $request->getPost('password'),
         ];
 
-        // Verificar si todos los campos están vacíos
         $campos_vacios = array_filter($campos, function ($valor) {
             return empty($valor);
         });
@@ -139,7 +138,6 @@ class UsuariosController extends BaseController
             return redirect()->route('iniciarsesion')->with('error', 'Debe completar todos los campos');
         }
 
-        // Verifica si la validación se cumple
         if ($validation->withRequest($request)->run()) {
             $Usuarios_Model = new UsuariosModel();
 
@@ -151,10 +149,7 @@ class UsuariosController extends BaseController
             if (!$usuarioEncontrado) {
                 return redirect()->route('iniciarsesion')->with('error', 'Usuario no registrado.');
             } else {
-                if (
-                    password_verify($password, $usuarioEncontrado['password_usuario']) ||
-                    $password === $usuarioEncontrado['password_usuario']
-                ) {
+                if (password_verify($password, $usuarioEncontrado['password_usuario'])) {
                     $session = session();
                     $data = [
                         'id' => $usuarioEncontrado['id_usuario'],
@@ -166,6 +161,8 @@ class UsuariosController extends BaseController
                     ];
                     $session->set($data);
                     return redirect()->route('/');
+                } else {
+                    return redirect()->route('iniciarsesion')->with('error', 'Contraseña incorrecta.');
                 }
             }
         } else {
@@ -173,11 +170,11 @@ class UsuariosController extends BaseController
             $data['validation'] = $validation->getErrors();
             return view('plantillas/head', $data) . view('plantillas/navbar') . view('frontend/login', $data) . view('plantillas/footer');
         }
-
     }
 
-    public function alta_Usuario($id) {
-        $usuario_Model = new UsuariosModel(); 
+    public function alta_Usuario($id)
+    {
+        $usuario_Model = new UsuariosModel();
         $usuario = $usuario_Model->find($id);
 
         if ($usuario && $usuario['estado_usuario'] == 0) {
@@ -188,8 +185,9 @@ class UsuariosController extends BaseController
         }
     }
 
-    public function baja_Usuario($id) {
-        $usuario_Model = new UsuariosModel(); 
+    public function baja_Usuario($id)
+    {
+        $usuario_Model = new UsuariosModel();
         $usuario = $usuario_Model->find($id);
 
         if ($usuario && $usuario['estado_usuario'] > 0) {
